@@ -58,6 +58,7 @@ navigator.mediaDevices
   socket.on('user-disconnected', userId => {
     if (peers[userId]) peers[userId].close()
   })
+  
   //peerjs --port 8000 --key peerjs --path /myapp
   //npm start
   //localhost 3030
