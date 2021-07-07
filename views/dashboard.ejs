@@ -1,0 +1,99 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome Ananya</p>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" rel="stylesheet"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous">
+            <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid nav-contcnt">
+        <a class="navbar-brand" href="#" style="color: #5F6368;"> <span style="font-weight: bold;">S</span> Meet</a>
+        <div class="d-flex">
+            <p class="m-0 px-3" style="font-weight: bold; color: #5F6368;">
+                <!--<= user.name %>-->
+            </p>
+            <a class="icon" href="#">
+                <ion-icon name="help-circle-outline"></ion-icon>
+            </a>
+            <a class="icon" href="#">
+                <ion-icon name="alert-circle-outline"></ion-icon>
+            </a>
+            <a class="icon" href="#">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a href="/users/logout" class="btn btn-secondary">Exit</a>
+        </div>
+        <style>
+            @media (max-width: 440px) {
+                .nav-contcnt {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .new-meeting {
+                    width: 124px;
+                    white-space: nowrap;
+                }
+            }
+            .icon {
+                text-decoration: none;
+                color: #68625f;
+                padding: 0rem .25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: .25rem;
+                margin: 0rem .35rem;
+            }
+            .icon:hover {
+                background-color: rgb(197, 197, 197);
+                color: #5F6368;
+            }
+            .icon ion-icon {
+                font-size: 1.7rem;
+            }
+        </style>
+    </div>
+</nav>
+<div class="container py-5">
+    <div class="row g-3">
+        <div class="col-md-6">
+            <h1 class="mb-3">
+                
+            </h1>
+            <p style="color: #5F6368;">A simple Video chat available to everyone.</p>
+            <div class="a123 my-5" style="display: flex; ">
+                <a class="btn btn-primary new-meeting" style="width: 180px;" href="/newMeeting" role="button">New
+                    Meeting</a>
+                <form action="join-room" style="margin-left: 1rem;" method="POST">
+                    <div class="input-group ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">
+                            <ion-icon name="planet-outline"></ion-icon>
+                        </span>
+                        <input name="room_id" type="text" class="form-control" placeholder="Enter a code or Link"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">Join</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <p><a href="#" style="text-decoration: none;">Learn more about</a> S Meet</p>
+        </div>
+        <div class="col-md-6">
+            <div class="card" style="box-shadow: 0 0 5px #b8b8b8;">
+                <div class="card-body">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

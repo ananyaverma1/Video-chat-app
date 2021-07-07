@@ -2,19 +2,7 @@ const express = require("express");
 const app = express();
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
-//
 
-/*const { auth } = require('express-openid-connect');
-require('dotenv').config()
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL:process.env.BASEURL,
-  clientID: process.env.CLIENTID,
-  issuerBaseURL: process.env.ISSUER
-};*/
-//
 app.set("view engine", "ejs");
 const io = require("socket.io")(server, {
   cors: {
@@ -28,10 +16,12 @@ const peerServer = ExpressPeerServer(server, {
 
 app.use("/peerjs", peerServer);
 app.use(express.static("public"));
-//
-//app.use(auth(config));
 
-//
+app.get("/newMeeting", (req, res) => {
+  res.redirect(`/${uuidv4()}`);
+});
+// Welcome Page
+app.get('/',  (req, res) => res.render('dashboard'));
 
 app.get("/", (req, res) => {
   res.redirect(`/${uuidv4()}`);
