@@ -23,12 +23,18 @@ app.get("/newMeeting", (req, res) => {
 // Welcome Page
 app.get('/',  (req, res) => res.render('dashboard'));
 
+
+
 app.get("/", (req, res) => {
   res.redirect(`/${uuidv4()}`);
 });
 
 app.get("/:room", (req, res) => {
   res.render("room", { roomId: req.params.room });
+});
+////
+app.post("/join-room", (req, res) => {
+  res.redirect(`/${req.body.room_id}`);
 });
 
 io.on("connection", (socket) => {
