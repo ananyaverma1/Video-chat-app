@@ -66,6 +66,7 @@ navigator.mediaDevices
   //npm start
   //localhost 3030
 
+//new peer connection
 const connectToNewUser = (userId, stream) => {
   const call = peer.call(userId, stream);
   const video = document.createElement("video");
@@ -133,6 +134,7 @@ const inviteButton = document.querySelector("#inviteButton");
 const muteButton = document.querySelector("#muteButton");
 const stopVideo = document.querySelector("#stopVideo");
 
+//audio toggle feature
 muteButton.addEventListener("click", () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
   if (enabled) {
@@ -148,6 +150,7 @@ muteButton.addEventListener("click", () => {
   }
 });
 
+//video toggle feature
 stopVideo.addEventListener("click", () => {
   const enabled = myVideoStream.getVideoTracks()[0].enabled;
   if (enabled) {
@@ -163,6 +166,7 @@ stopVideo.addEventListener("click", () => {
   }
 });
 
+//invite button
 inviteButton.addEventListener("click", (e) => {
   prompt(
     "Copy this link and send it to people you want to meet with",
@@ -170,6 +174,7 @@ inviteButton.addEventListener("click", (e) => {
   );
 });
 
+//Handles Chat Messaging
 socket.on("createMessage", (message, userName) => {
   messages.innerHTML =
     messages.innerHTML +
