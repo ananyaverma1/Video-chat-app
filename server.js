@@ -17,6 +17,7 @@ const peerServer = ExpressPeerServer(server, {
 app.use("/peerjs", peerServer);
 app.use(express.static("public"));
 
+
 app.get("/newMeeting", (req, res) => {
   res.redirect(`/${uuidv4()}`);
 });
