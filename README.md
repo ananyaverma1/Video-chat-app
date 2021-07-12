@@ -69,6 +69,7 @@ For running the application locally, all you need are 3 simple steps!
 That's it. Go to http://localhost:3030/ to begin right away!
 # Demo
 As you open the link to the app or run it locally, you'll come across a front page. This is the dashboard. To begin, click on the new meeting to start an instant meeting with your peers.
+![Dashboard](./Images/Dashboard.PNG)
 
 A bar will pop out requiring you to fill your name and meeting has been hosted.
 To invite over other friends in this room, send them the room code. To send them the unique URL click on the user invite button in bottom right corner and copy paste the link and send to your peers. 
@@ -76,6 +77,8 @@ To invite over other friends in this room, send them the room code. To send them
 As soon as they click on the link, they will be directed to the same meeting.
  
 **Chat feature:** On the right side, you see the chat feature to allow users to share important information among users without disturbing the flow of the meeting.
+
+![chat](./Images/chat.PNG)
  
 When you enter the video call, you'll see your teams video along with yours on the screen. Make sure that more than four people dont join because the room will be filled. On the bottom, you might see some buttons.
 
@@ -83,6 +86,7 @@ When you enter the video call, you'll see your teams video along with yours on t
 
 **Share Screen:** For sharing your screen click on the button as shown below and then select the tab and press on share. For stop sharing you can click on the same button again.
 To leave the meeting, simply close your browser.
+![peertopeer](./Images/peertopeer.png)
 
 # FAQ
 
