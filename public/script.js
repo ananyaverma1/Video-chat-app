@@ -29,6 +29,9 @@ var peer = new Peer(undefined, {
   host: "/",
   port: "8000",
 });*/
+//peerjs --port 8000 --key peerjs --path /myapp
+//npm start
+//localhost 3030
 const peer = new Peer();
 
 const peers = {}
@@ -61,10 +64,6 @@ navigator.mediaDevices
   socket.on('user-disconnected', userId => {
     if (peers[userId]) peers[userId].close()
   })
-  
-  //peerjs --port 8000 --key peerjs --path /myapp
-  //npm start
-  //localhost 3030
 
 //new peer connection
 const connectToNewUser = (userId, stream) => {
